@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Data Wiping System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel wipe-panel">
+      <div>
+        <h1>Secure Data Wiping System</h1>
+        <p class="intro">Upload a file, choose a wipe level, and receive a verifiable certificate with a QR code.</p>
+      </div>
+
+      <section class="device-panel" aria-labelledby="deviceTypeHeading">
+        <div>
+          <p class="eyebrow">Device</p>
+          <p class="step-label">Step 1: Select Device</p>
+          <h2 id="deviceTypeHeading">Select Device Type</h2>
+        </div>
+
+        <div class="device-grid" role="radiogroup" aria-label="Select device type">
+          <button type="button" class="device-card selected" data-device="Laptop" role="radio" aria-checked="true">
+            Laptop
+          </button>
+          <button type="button" class="device-card" data-device="Mobile" role="radio" aria-checked="false">
+            Mobile
+          </button>
+          <button type="button" class="device-card" data-device="Hard Disk" role="radio" aria-checked="false">
+            Hard Disk
+          </button>
+          <button type="button" class="device-card" data-device="USB Drive" role="radio" aria-checked="false">
+            USB Drive
+          </button>
+        </div>
+
+      </section>
+
+      <label class="field">
+        <span>Wipe mode</span>
+        <span class="step-label">Step 3: Choose Wipe Mode</span>
+        <select id="mode" name="mode">
+          <option value="quick">Quick Wipe (1 pass)</option>
+          <option value="secure">Secure Wipe (3 passes)</option>
+          <option value="military">Military Wipe (7 passes)</option>
+        </select>
+      </label>
+
+      <section class="wipe-mode-panel" aria-labelledby="wipeModeHeading">
+        <div>
+          <p class="eyebrow">Wipe mode</p>
+          <h2 id="wipeModeHeading">Select Wipe Mode</h2>
+        </div>
+
+        <div class="wipe-mode-tabs" role="radiogroup" aria-label="Select wipe mode">
+          <button type="button" class="wipe-mode-tab selected" data-wipe-mode="File Wipe" role="radio" aria-checked="true">
+            File Wipe
+          </button>
+          <button type="button" class="wipe-mode-tab" data-wipe-mode="Device Wipe" role="radio" aria-checked="false">
+            Device Wipe
+          </button>
+        </div>
+      </section>
+
+      <section class="panel platform-panel hidden" id="platformSection">
+        <div>
+          <p class="eyebrow">Platform</p>
+          <h2>Select Platform</h2>
+          <p class="helper-text">Select platform for device-level wiping simulation</p>
+        </div>
+
+        <div class="platform-grid" role="radiogroup" aria-label="Select platform">
+          <button type="button" class="platform-card selected" data-platform="Windows" role="radio" aria-checked="true">
+            Windows
+          </button>
+          <button type="button" class="platform-card" data-platform="Linux" role="radio" aria-checked="false">
+            Linux
+          </button>
+          <button type="button" class="platform-card" data-platform="Android" role="radio" aria-checked="false">
+            Android
+          </button>
+        </div>
+
+        <div class="selected-platform-card">
+          <p class="selected-platform-label">Selected platform</p>
+          <h3 id="selectedPlatformName">Windows</h3>
+          <p id="selectedPlatformDescription">Optimized for wiping files selected from Windows desktops and laptops.</p>
+          <button type="button" id="selectedPlatformButton" class="platform-download-button">
+            Download Windows Version
+          </button>
+        </div>
+      </section>
+
+      <div class="selected-device-display" id="selectedDeviceDisplay">
+        Selected Device: Laptop
+      </div>
+
+      <form id="wipeForm" class="form-grid">
+        <label class="field">
+          <span>File</span>
+          <span class="step-label">Step 2: Upload File</span>
+          <input type="file" id="fileInput" name="file" required disabled>
+          <span id="deviceRequiredMessage" class="field-message">Please select a device first</span>
+        </label>
+
+        <div class="field">
+          <span class="step-label">Step 4: Start Wipe</span>
+        <button type="submit" id="wipeButton">Start Wipe</button>
+        </div>
+      </form>
+
+      <div id="progress" class="status" role="status">Ready</div>
+    </section>
+
+    <section class="panel certificate-panel">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Generated certificate</p>
+          <h2>Certificate</h2>
+        </div>
+        <button
+          type="button"
+          id="downloadCert"
+          class="px-5 py-3 rounded-lg bg-sky-700 text-white font-semibold shadow-sm transition hover:bg-sky-800 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-60"
+          disabled
+        >
+          Download Certificate
+        </button>
+      </div>
+
+      <div id="certificateEmpty" class="empty-state">No certificate generated yet.</div>
+
+      <div id="certificateCard" class="certificate-card hidden">
+        <dl id="certificateDetails"></dl>
+        <div class="qr-block">
+          <img id="qrImage" alt="Certificate verification QR code">
+          <a id="verifyLink" href="#" target="_blank" rel="noreferrer">Open QR verification</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel verify-panel">
+      <div>
+        <p class="eyebrow">Verify any certificate</p>
+        <h2>Certificate Verification</h2>
+      </div>
+
+      <form id="verifyForm" class="form-grid">
+        <label class="field">
+          <span>Certificate JSON</span>
+          <input type="file" id="certUpload" required>
+        </label>
+        <button type="submit" id="verifyButton">Verify Certificate</button>
+      </form>
+
+      <div id="verifyResult" class="status" role="status">Waiting for a certificate file.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

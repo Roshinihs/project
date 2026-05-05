@@ -1,0 +1,15 @@
+{
+  "id": "47c8d56361df6550",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T05:16:04.282Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "d3a7d8d213e27b7f8c9b00182c741d15a35c6fa8234acbd523e4fabdb5a2d714",
+  "verifyUrl": "http://localhost:3001/verify.html?id=47c8d56361df6550",
+  "qr": "/qrcodes/47c8d56361df6550.png"
+}

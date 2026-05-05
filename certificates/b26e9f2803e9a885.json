@@ -1,0 +1,15 @@
+{
+  "id": "b26e9f2803e9a885",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T03:51:40.863Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "54f295e093b77508565027471697618d5b0c4a259cff0223e7cc454f58e4c35b",
+  "verifyUrl": "http://localhost:3001/verify.html?id=b26e9f2803e9a885",
+  "qr": "/qrcodes/b26e9f2803e9a885.png"
+}

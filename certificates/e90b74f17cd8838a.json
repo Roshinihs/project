@@ -1,0 +1,15 @@
+{
+  "id": "e90b74f17cd8838a",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T03:37:20.332Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "5a22ca8103594de7b784b08472a0b0c6edda39b52c6dd4377cf7c0564a944623",
+  "verifyUrl": "http://localhost:3001/verify.html?id=e90b74f17cd8838a",
+  "qr": "/qrcodes/e90b74f17cd8838a.png"
+}

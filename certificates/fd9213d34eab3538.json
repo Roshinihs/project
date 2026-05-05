@@ -1,0 +1,15 @@
+{
+  "id": "fd9213d34eab3538",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T03:49:01.835Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "29db069131be52866a47819325d6456445fea57cc538a668e99435ba6a5df8a3",
+  "verifyUrl": "http://localhost:3001/verify.html?id=fd9213d34eab3538",
+  "qr": "/qrcodes/fd9213d34eab3538.png"
+}

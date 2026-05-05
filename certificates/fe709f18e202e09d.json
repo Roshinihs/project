@@ -1,0 +1,15 @@
+{
+  "id": "fe709f18e202e09d",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T06:17:51.681Z",
+  "duration": "0.00 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "4a18968e1d2ff80283a6d19aa5e3869d3551df2d2f2c27e4345aa3a444faf226",
+  "verifyUrl": "http://localhost:3001/verify.html?id=fe709f18e202e09d",
+  "qr": "/qrcodes/fe709f18e202e09d.png"
+}

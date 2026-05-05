@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Certificate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="verify-page">
+    <section class="panel">
+      <p class="eyebrow">QR verification</p>
+      <h1>Certificate Status</h1>
+      <div id="result" class="status">Verifying certificate...</div>
+      <dl id="details" class="verify-details"></dl>
+      <a class="home-link" href="/">Back to wiping system</a>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const result = document.getElementById("result");
+    const details = document.getElementById("details");
+
+    function setResult(message, type) {
+      result.textContent = message;
+      result.className = `status ${type || ""}`.trim();
+    }
+
+    function renderDetails(certificate) {
+      if (!certificate) {
+        details.innerHTML = "";
+        return;
+      }
+
+      const rows = [
+        ["Certificate ID", certificate.id],
+        ["File", certificate.file],
+        ["Method", certificate.method],
+        ["Completed", new Date(certificate.time).toLocaleString()],
+        ["Hash", certificate.hash],
+      ];
+
+      details.innerHTML = rows
+        .map(([label, value]) => `<dt>${label}</dt><dd>${value}</dd>`)
+        .join("");
+    }
+
+    async function verifyCertificate() {
+      if (!id) {
+        setResult("No certificate id was provided in the QR link.", "error");
+        return;
+      }
+
+      try {
+        const response = await fetch(`/api/certificates/${encodeURIComponent(id)}/verify`);
+        const data = await response.json();
+
+        setResult(
+          data.valid ? "Certificate is valid." : `Certificate is invalid. ${data.reason}`,
+          data.valid ? "success" : "error"
+        );
+        renderDetails(data.certificate);
+      } catch (error) {
+        setResult("Could not verify this certificate.", "error");
+      }
+    }
+
+    verifyCertificate();
+  </script>
+</body>
+</html>

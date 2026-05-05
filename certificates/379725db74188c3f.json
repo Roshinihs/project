@@ -1,0 +1,15 @@
+{
+  "id": "379725db74188c3f",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T03:54:09.554Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "1fdb8220f637ddc8aa42784e26c8bda40dfb63ab5f5af14ce870df1d14f7cf3d",
+  "verifyUrl": "http://localhost:3001/verify.html?id=379725db74188c3f",
+  "qr": "/qrcodes/379725db74188c3f.png"
+}

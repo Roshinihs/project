@@ -1,0 +1,15 @@
+{
+  "id": "e1000e888c3e4eb2",
+  "file": "text.txt",
+  "size": "22 bytes",
+  "sizeBytes": 22,
+  "time": "2026-05-05T03:06:59.728Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "1b403dbbe23da3a00888b238eb9cdfa6da7bcefe21c451e1c67c33c537c8e67d",
+  "verifyUrl": "http://localhost:3001/verify.html?id=e1000e888c3e4eb2",
+  "qr": "/qrcodes/e1000e888c3e4eb2.png"
+}

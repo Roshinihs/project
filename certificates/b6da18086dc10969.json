@@ -1,0 +1,15 @@
+{
+  "id": "b6da18086dc10969",
+  "file": "text.txt",
+  "size": "22 bytes",
+  "sizeBytes": 22,
+  "time": "2026-05-05T03:09:39.154Z",
+  "duration": "0.02 sec",
+  "mode": "military",
+  "method": "Military Wipe (7 passes)",
+  "passes": 7,
+  "status": "Wiped Successfully",
+  "hash": "0d9bbe7c8af88caebf1fae6ac08ae2e047c3effaa520d4a38252b8dd03a97331",
+  "verifyUrl": "http://localhost:3001/verify.html?id=b6da18086dc10969",
+  "qr": "/qrcodes/b6da18086dc10969.png"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "4226afe022cf3264",
+  "file": "text.txt",
+  "size": "24 bytes",
+  "sizeBytes": 24,
+  "time": "2026-05-05T03:53:46.790Z",
+  "duration": "0.01 sec",
+  "mode": "quick",
+  "method": "Quick Wipe (1 pass)",
+  "passes": 1,
+  "status": "Wiped Successfully",
+  "hash": "b72b52d81e42547917b66a574a4ed93d0e829b6c94b9336e4a0ab90bec3b4c05",
+  "verifyUrl": "http://localhost:3001/verify.html?id=4226afe022cf3264",
+  "qr": "/qrcodes/4226afe022cf3264.png"
+}
